@@ -1,0 +1,52 @@
+$primary-text-color: #322f3d;
+
+@mixin glassmorphism {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer {
+  margin: 1rem 0;
+  @include glassmorphism;
+  padding: 1rem;
+  h2 {
+    text-align: center;
+    color: $primary-text-color;
+  }
+  hr {
+    border-style: dashed;
+    border-color: $primary-text-color;
+  }
+  .walletPrice {
+    color: $primary-text-color;
+    padding: 0.25rem 0;
+    text-align: end;
+  }
+}
+
+.receiptWrapper {
+  padding: 0.5rem 0;
+
+  .receiptItems {
+    display: flex;
+
+    div {
+      display: flex;
+      flex: 1;
+      color: $primary-text-color;
+
+      &:first-child {
+        flex: 1.85;
+        padding-right: 1rem;
+      }
+      &:last-child {
+        justify-content: flex-end;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
